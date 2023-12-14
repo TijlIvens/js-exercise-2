@@ -21,21 +21,21 @@ const saveCount = (count) => {
 };
 
 plusButton.addEventListener("click", () => {
-  count++;
+  currentCount++;
 
-  setCount(count);
+  setCount(currentCount);
 });
 
 minusButton.addEventListener("click", () => {
-  count--;
+  currentCount--;
 
-  setCount(count);
+  setCount(currentCount);
 });
 
 resetButton.addEventListener("click", () => {
-  count = 0;
+  currentCount = 0;
 
-  setCount(count);
+  setCount(currentCount);
 });
 
 counterInput.addEventListener("input", (event) => {
@@ -55,20 +55,21 @@ setButton.addEventListener("click", () => {
     return;
   }
 
-  count = parseInt(inputText);
+  currentCount = parseInt(inputText);
+  counterText.innerText = currentCount;
 
   clearInput();
 
-  setCount(count);
+  saveCount(currentCount);
 });
 
 const setInitialCount = () => {
   const storedCountString = localStorage.getItem("count") ?? 0;
   const storedCount = parseInt(storedCountString);
 
-  count = storedCount;
+  currentCount = storedCount;
 
-  setCount(count);
+  setCount(currentCount);
 };
 
 setInitialCount();

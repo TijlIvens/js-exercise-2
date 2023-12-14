@@ -16,19 +16,19 @@ const saveCount = (count) => {
 };
 
 plusButton.addEventListener("click", () => {
-  count++;
+  currentCount++;
 
-  setCount(count);
+  setCount(currentCount);
 });
 
 minusButton.addEventListener("click", () => {
-  count--;
+  currentCount--;
 
-  setCount(count);
+  setCount(currentCount);
 });
 
 resetButton.addEventListener("click", () => {
-  count = 0;
+  currentCount = 0;
 
-  setCount(count);
+  setCount(currentCount);
 });
