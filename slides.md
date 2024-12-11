@@ -160,3 +160,55 @@ css: unocss
 - It removes the item out of localStorage, by comparing the text with the texts in localStorage
 
 [Solution](/ToDo/part4.js)
+
+---
+
+# Exercise: Calculator app
+
+- Open the [start project](/calculator/CalculatorStart.zip)
+- Run `npm install` in the root of the project
+- Run `npm run start` in the root of the project to spin up the server
+- The html, css is already written for this project
+- Complete the index.js file to make it a functioning Calculator app
+
+---
+
+# Overview of the app
+
+- A user can input 2 numbers
+- When an operation is clicked the calculation will be done and shown in the history
+- A history of all results will be shown and saved for when the page reloads
+- With the reset button everything will be cleared
+
+---
+
+# Calculator: Part 1
+
+- When the clear button is pressed the corresponding input should be cleared
+- Create a function for each operation that gets the 2 inputs as parameters and returns the correct result
+
+---
+
+# Calculator: Part 2
+
+- Create a function `saveResult` that gets a result as parameter and saves it in `localStorage`
+- Separate the different items in storage by a `-`
+- Make sure the code will still work when there is no data in `localStorage`
+
+---
+
+# Calculator: Part 3
+
+- Create a function `showInHistory` that gets a result as parameter and shows the result in the history list
+- Every history item is a `p` tag with the result as text
+- Create a function `handleResult` that gets a result as parameter the function will round the result to show max 2 digits after the comma
+- The `showInHistory` and `saveResult` functions should be called with the rounded result
+
+---
+
+# Calculator: Part 4
+
+- Implement the 4 calculate buttons
+- Every button should call the corresponding calculate function and then pass the result to `handleResult`
+- When the rest button is clicked the localStorage should be cleared, the history list should be empty and both inputs should be cleared
+- Make sure the history list is loaded from `localStorage` when the page reloads
