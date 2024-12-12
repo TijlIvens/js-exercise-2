@@ -187,6 +187,8 @@ css: unocss
 - When the clear button is pressed the corresponding input should be cleared
 - Create a function for each operation that gets the 2 inputs as parameters and returns the correct result
 
+[Solution](/calculator/part1.js)
+
 ---
 
 # Calculator: Part 2
@@ -194,6 +196,8 @@ css: unocss
 - Create a function `saveResult` that gets a result as parameter and saves it in `localStorage`
 - Separate the different items in storage by a `-`
 - Make sure the code will still work when there is no data in `localStorage`
+
+[Solution](/calculator/part2.js)
 
 ---
 
@@ -203,6 +207,9 @@ css: unocss
 - Every history item is a `p` tag with the result as text
 - Create a function `handleResult` that gets a result as parameter the function will round the result to show max 2 digits after the comma
 - The `showInHistory` and `saveResult` functions should be called with the rounded result
+- It should also show the result in the result text
+
+[Solution](/calculator/part3.js)
 
 ---
 
@@ -210,5 +217,7 @@ css: unocss
 
 - Implement the 4 calculate buttons
 - Every button should call the corresponding calculate function and then pass the result to `handleResult`
-- When the rest button is clicked the localStorage should be cleared, the history list should be empty and both inputs should be cleared
+- When the rest button is clicked the localStorage should be cleared, the history list and result should be empty and both inputs should be cleared
 - Make sure the history list is loaded from `localStorage` when the page reloads
+
+[Solution](/calculator/part4.js)
